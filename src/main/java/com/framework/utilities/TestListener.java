@@ -9,6 +9,14 @@ import com.aventstack.extentreports.Status;
 import com.framework.base.BaseClass;
 
 public class TestListener extends BaseClass implements ITestListener{
+
+	 @Override
+    public void onStart(ITestContext context) {
+        ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/target/ExtentReport.html");
+        extent = new ExtentReports();
+        extent.attachReporter(spark);
+        extent.setSystemInfo("Tester", "Shyam");
+	}
 	
 	@Override
 	public void onTestStart(ITestResult result)
@@ -41,6 +49,8 @@ public class TestListener extends BaseClass implements ITestListener{
 	@Override
 	public void onFinish(ITestContext context)
 	{
-		extent.flush();
+		if (extent != null) {
+            extent.flush(); 
+        }
 	}
 }
