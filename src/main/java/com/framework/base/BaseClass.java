@@ -20,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static WebDriver driver;
-	public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	public static WebDriverWait wait;
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	
@@ -51,6 +51,8 @@ public class BaseClass {
 			throw new RuntimeException("Unsupported browser: " + browser);
 		}
 
+		
+		wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitTime));
 		driver.get(url);
