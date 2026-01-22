@@ -1,6 +1,7 @@
 package com.framework.tests;
 
 import org.testng.Assert;	
+
 import org.testng.annotations.Test;
 
 import com.framework.base.BaseClass;
@@ -31,7 +32,8 @@ public class LoginTest extends BaseClass{
 		LoginPage login = new LoginPage();
 		login.loginAs(username, password);
 		
-		Assert.assertTrue(login.isLoginSuccessful(), "Login failed - Title mismatch");
+		Assert.assertFalse(login.isLoginSuccessful(), "Login failed - Title mismatch");
+		//Assert.assertTrue(login.isErrorDisplayed(), "Error message not shown for invalid login");
 	}
 
 }

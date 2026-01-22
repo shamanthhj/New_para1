@@ -4,40 +4,15 @@
   <listeners>
     <listener class-name="com.framework.utilities.TestListener"/>
   </listeners>
-  <test thread-count="5" name="smoke(failed)">
+  <test thread-count="5" name="AllTests(failed)">
     <classes>
-      <class name="com.framework.tests.OpenNewAccountTest">
+      <class name="com.framework.tests.LoginTest">
         <methods>
+          <include name="invalidLoginTest"/>
           <include name="teardown"/>
-          <include name="testOpenNewAccount"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.framework.tests.OpenNewAccountTest -->
+      </class> <!-- com.framework.tests.LoginTest -->
     </classes>
-  </test> <!-- smoke(failed) -->
-  <test thread-count="5" name="regression(failed)">
-    <classes>
-      <class name="com.framework.tests.EndToEndTest">
-        <methods>
-          <include name="endToEndFlow"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.framework.tests.EndToEndTest -->
-      <class name="com.framework.tests.TransferFundsTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="testTransferFundsFunctionality"/>
-        </methods>
-      </class> <!-- com.framework.tests.TransferFundsTest -->
-      <class name="com.framework.tests.OpenNewAccountTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="testOpenNewAccount"/>
-        </methods>
-      </class> <!-- com.framework.tests.OpenNewAccountTest -->
-    </classes>
-  </test> <!-- regression(failed) -->
+  </test> <!-- AllTests(failed) -->
 </suite> <!-- Failed suite [ParaBankSuite] -->

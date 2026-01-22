@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.framework.tests.EndToEndTest">
+      <class name="com.framework.tests.LoginTest">
         <methods>
-          <include name="endToEndFlow"/>
+          <include name="invalidLoginTest"/>
+          <include name="validLoginTest"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.framework.tests.EndToEndTest -->
+      </class> <!-- com.framework.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
