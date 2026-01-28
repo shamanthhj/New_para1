@@ -22,11 +22,11 @@ public class EndToEndTest extends BaseClass {
 		
 		OpenNewAccountPage accountPage = new OpenNewAccountPage();
 
-		accountPage.openNewAccount("CHECKING", "18894");
+		accountPage.openNewAccount("CHECKING", "13566");
 		
 		TransferFundsPage tfPage = new TransferFundsPage();
 
-        tfPage.transferFunds("18894", "18894", "500");
+        tfPage.transferFunds("13566", "13566", "500");
 
         
         LogoutPage logout = new LogoutPage();
