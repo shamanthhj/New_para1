@@ -19,7 +19,7 @@ public class OpenNewAccountTest extends BaseClass {
 		login.loginAs(username, password);
 		
 		OpenNewAccountPage accountPage = new OpenNewAccountPage();
-		accountPage.openNewAccount("CHECKING", "13899");
+		accountPage.openNewAccount("CHECKING", "15120");
 		Assert.assertTrue(accountPage.isAccountOpened(), "Account creation failed!");
 	}
 
