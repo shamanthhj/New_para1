@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="AllTests(failed)">
     <classes>
-      <class name="com.framework.tests.LoginTest">
+      <class name="com.framework.tests.TransferFundsTest">
         <methods>
-          <include name="invalidLoginTest"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="testTransferFundsFunctionality"/>
         </methods>
-      </class> <!-- com.framework.tests.LoginTest -->
+      </class> <!-- com.framework.tests.TransferFundsTest -->
     </classes>
   </test> <!-- AllTests(failed) -->
 </suite> <!-- Failed suite [ParaBankSuite] -->
