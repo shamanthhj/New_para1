@@ -19,6 +19,7 @@ public class TransferFundsTest extends BaseClass{
 		login.loginAs(username, password);
 		
 		TransferFundsPage tfPage = new TransferFundsPage();
+
         tfPage.transferFunds("18894", "18894", "500");
 
        // Assert.assertTrue(tfPage.isTransferSuccessful(), "Transfer failed!");

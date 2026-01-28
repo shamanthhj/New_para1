@@ -21,10 +21,13 @@ public class EndToEndTest extends BaseClass {
 		login.loginAs(username, password);
 		
 		OpenNewAccountPage accountPage = new OpenNewAccountPage();
+
 		accountPage.openNewAccount("CHECKING", "18894");
 		
 		TransferFundsPage tfPage = new TransferFundsPage();
+
         tfPage.transferFunds("18894", "18894", "500");
+
         
         LogoutPage logout = new LogoutPage();
 		logout.clickLogout();
